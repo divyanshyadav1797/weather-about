@@ -2,7 +2,7 @@
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
+    margin: 0px;
     padding: 10px;
     transition: background-color 0.5s ease;
     color: #111;
@@ -12,11 +12,11 @@ body {
 .top-part {
     text-align: center;
     margin-bottom: 36px;
-    padding-top: 30px;
+    padding-top: 0px;
 }
 
 .top-part h1 {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-size: 3rem;
     font-weight: 900;
     letter-spacing: -2px;
@@ -27,7 +27,7 @@ body {
 .top-part p {
     color: #888;
     font-size: 0.9rem;
-    margin: 0;
+    margin-bottom: 1px;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -35,14 +35,14 @@ body {
 /* Search area */
 .search-box {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: center;
     align-items: stretch;
 }
 
 .search-box input {
-    padding: 12px 18px;
+    padding: 10px 18px;
     width: 220px;
     border: 2px solid #000;
     border-right: none;
@@ -88,28 +88,6 @@ body {
     background-color: #222;
     color: #fff;
 }
-
-/* Weather details */
-/* .weather-info {
-        background-color: white;
-        padding: 15px;
-        border: 1px solid #ccc;
-        max-width: 350px;
-        margin: 0 auto 20px auto;
-}
-
-.weather-info h2 {
-    margin-top: 0;
-}
-
-.weather-info p {
-    margin: 8px 0;
-}
-
-#Weather-info {
-    display :none;
-
-} */
 
 /*error and waether information textbox*/
 .WeatherInfoTextbox {
@@ -217,13 +195,16 @@ body {
     border: 2px solid #000000;
     box-shadow: 4px 4px 0px #000000;
     cursor: pointer;
-    transition: transform 0.05s ease, box-shadow 0.05s ease;
+    transition: background-color 0.2s, color 0.2s;
+    transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.2s, color 0.2s;
 }
 
 /*adding animations when pressing or hovering on button */
 .forecast-page-btn:hover {
     transform: translate(-1px, -1px);
     box-shadow: 5px 5px 0px #000000;
+    
+    background-color: #fff596;
 }
 
 .forecast-page-btn:active {
