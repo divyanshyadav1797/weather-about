@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="index.js" defer></script>
+    <title>WeatherAbout</title>
+</head>
+<body>
 
+    <div class="top-part">
+        <h1>Weather-About</h1>
+        <p>Check weather of your city.</p>
+    </div>
+    
+    <!-- Search section -->
+    <div class="search-box">
+        <input id="inputPlace" placeholder="Enter city name">
+        <button id="placeSearchButton">Search</button>
+    </div>
+    
+    <div id="WeatherInfoTextbox" class="WeatherInfoTextbox" hidden>
+
+        <h2 id="PlaceName"></h2>
+        
+        <p id="displayTempC"></p>
+        <p id="displayTempF"></p>
+        
+        <p id="displayCondition"></p>
+
+        <p id="displayHumidity"></p>
+        <p id="displayWind"></p>
+
+    </div>
+    
+    <div class="forecast-link-block">
+        <button id="forecastPageButton" class="forecast-page-btn">View Future Forecast</button>
+    </div>
+    
+    <!-- Current weather information -->
+    <!-- <div id="Weather-info" class="weather-info">
+        <h2>City Name</h2>
+
+        <p>Temp: -- °C</p>
+        <p>Weather: --</p>
+        <p>Humidity: --%</p>
+        <p>Wind: -- km/h</p>
+    </div> -->
+    
+    
+</body>
+</html>
