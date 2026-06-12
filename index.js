@@ -3,7 +3,7 @@ import config from './config.js';
 
 
 let input_Place;
-
+//API_KEY=4601dd807fb1464097b124823261106
 const API_KEY= config.API_KEY;
 
 //taking input from user by clicking the search button and taking input from user by pressing enter button
