@@ -1,0 +1,204 @@
+/* Basic page style */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 10px;
+    transition: background-color 0.5s ease;
+    color: #111;
+}
+
+/* Top section */
+.top-part {
+    text-align: center;
+    margin-bottom: 36px;
+    padding-top: 30px;
+}
+
+.top-part h1 {
+    margin-bottom: 8px;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+.top-part p {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Search area */
+.search-box {
+    text-align: center;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.search-box input {
+    padding: 12px 18px;
+    width: 220px;
+    border: 2px solid #000;
+    border-right: none;
+    outline: none;
+    font-size: 0.95rem;
+    background: #fff;
+    color: #000;
+    font-family: inherit;
+    border-radius: 0;
+    /* -webkit-appearance: none; */
+}
+
+.search-box input::placeholder {
+    color: #bbb;
+    letter-spacing: 0.5px;
+}
+
+.search-box input:focus {
+    background: #fafafa;
+}
+
+.search-box button {
+    padding: 12px 20px;
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #000;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: background-color 0.2s, color 0.2s;
+    font-family: inherit;
+    border-radius: 0;
+}
+
+.search-box button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.search-box button:active {
+    background-color: #222;
+    color: #fff;
+}
+
+/* Weather details */
+/* .weather-info {
+        background-color: white;
+        padding: 15px;
+        border: 1px solid #ccc;
+        max-width: 350px;
+        margin: 0 auto 20px auto;
+}
+
+.weather-info h2 {
+    margin-top: 0;
+}
+
+.weather-info p {
+    margin: 8px 0;
+}
+
+#Weather-info {
+    display :none;
+
+} */
+
+/*error and waether information textbox*/
+.WeatherInfoTextbox {
+    text-align: left;
+    padding: 28px 30px;
+    max-width: 350px;
+    margin: 0 auto 20px auto;
+    background: #fff;
+    border: 2px solid #000;
+    box-shadow: 6px 6px 0px #000;
+}
+
+.WeatherInfoTextbox p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+#PlaceName {
+    margin-top: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-bottom: 14px;
+    border-bottom: 1.5px solid #e8e8e8;
+    margin-bottom: 6px;
+}
+
+#displayCondition{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#displayTempC,
+#displayTempF,
+#displayCondition,
+#displayHumidity,
+#displayWind,
+#weatherIcon {
+    display: block;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 0.92rem;
+    color: #111;
+    line-height: 1.5;
+    border-bottom: 1px solid #a2a2a2;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.displayWind {
+    border-bottom: none;
+    padding-bottom: 4px;
+}
+
+/* animation part */
+#WeatherInfoTextbox:not([hidden]) {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  
+  @starting-style {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+/* adding weather icon in fornt of weather condition text or element  */
+
+#weatherIcon {
+    width: 28px;         
+    height: 28px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    box-shadow: 1.5px 1.5px 0px #000000; 
+    padding: 1px;
+    flex-shrink: 0;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 25px;
+    color: #aaa;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+}
