@@ -1,9 +1,16 @@
 //importing the API KEY from config.js so we can push the file in github
 import config from './config.js';
-
+let PlaceName;
+let Region;
+let Country;
+let TempInC;
+let TempInF;
+let WeatherCondition;
+let Humidity;
+let Wind;
 
 //API_KEY=4601dd807fb1464097b124823261106
-const API_KEY= config.API_KEY;
+const API_KEY="4601dd807fb1464097b124823261106";
 
 //taking input from user by clicking the search button and taking input from user by pressing enter button
 document.getElementById("placeSearchButton").addEventListener("click",SearchButtonPress); //by clicking search button
@@ -35,7 +42,7 @@ async function SearchButtonPress(event){
 
 //here fetching the weather api service to get the info about weather
 async function getPlaceWeather(place){
-    const URL =  `https://api.weatherapi.com/v1/current.json?key=${config.API_KEY}&q=${place}&aqi=yes`;
+    const URL =  `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${place}&aqi=yes`;
     try{
         const response = await fetch(URL);
 
@@ -69,14 +76,14 @@ function ShowWeatherInfo(WeatherInfo){
     document.getElementById("WeatherInfoTextbox").hidden = false;
     
     //storing the json info in the variable
-    let PlaceName = WeatherInfo.location["name"];
-    let Region = WeatherInfo.location["region"];
-    let Country = WeatherInfo.location["country"];
-    let TempInC = WeatherInfo.current["temp_c"];
-    let TempInF = WeatherInfo.current["temp_f"];
-    let WeatherCondition = WeatherInfo.current.condition["text"];
-    let Humidity = WeatherInfo.current["humidity"];
-    let Wind = WeatherInfo.current["wind_kph"];
+    PlaceName = WeatherInfo.location["name"];
+    Region = WeatherInfo.location["region"];
+    Country = WeatherInfo.location["country"];
+    TempInC = WeatherInfo.current["temp_c"];
+    TempInF = WeatherInfo.current["temp_f"];
+    WeatherCondition = WeatherInfo.current.condition["text"];
+    Humidity = WeatherInfo.current["humidity"];
+    Wind = WeatherInfo.current["wind_kph"];
 
     //extracting icon url form json to the variable
     let IconUrl = WeatherInfo.current.condition["icon"]; 
@@ -129,3 +136,20 @@ function ShowWeatherInfo(WeatherInfo){
     
 }
 
+
+
+//now the javascript for foracaste page
+document.getElementById("forecastPageButton").addEventListener("click",onLoadForcastPage);
+const weatherCard = document.getElementById("WeatherInfoTextbox");
+const mainBody = document.body;
+
+function onLoadForcastPage() {
+        let safeCityName = encodeURIComponent(PlaceName);
+        
+        
+        weatherCard.classList.add("page-exit-active");
+        
+        setTimeout(function() {
+            window.location.href = `forcast-page/forcast-weather.html?city=${safeCityName}`;
+        }, 400);
+    };
