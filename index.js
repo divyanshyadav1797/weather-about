@@ -150,6 +150,6 @@ function onLoadForcastPage() {
         weatherCard.classList.add("page-exit-active");
         
         setTimeout(function() {
-            window.location.href = `../forcast-page/forcast-weather.html?city=${safeCityName}`;
+            window.location.href = `forcast-weather.html?city=${safeCityName}`;
         }, 400);
     };
